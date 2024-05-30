@@ -82,7 +82,7 @@ def puede_loguearse(request) -> bool:
         return True
     
 
-def loguear_usuario(request):
+def login(request):
     if request.method == 'GET':
         ip = get_client_ip(request)        
         return render(request, 'login.html', {'ip': ip})
